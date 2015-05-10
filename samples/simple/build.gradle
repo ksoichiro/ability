@@ -1,0 +1,15 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    maven {
+        url uri('../../.repo')
+    }
+}
+
+dependencies {
+    compile 'com.github.ksoichiro:ability:+'
+}
+
+mainClassName = 'com.example.Main'
+applicationDefaultJvmArgs = ['-ea']

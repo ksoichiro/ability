@@ -12,4 +12,7 @@ idea {
         languageLevel = '1.6'
         vcs = 'Git'
     }
+    module {
+        excludeDirs += file('.repo')
+    }
 }

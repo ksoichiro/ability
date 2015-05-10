@@ -6,3 +6,5 @@ targetCompatibility = JavaVersion.VERSION_1_6
 dependencies {
     testCompile 'junit:junit:4.12'
 }
+
+apply from: 'build-release.gradle'

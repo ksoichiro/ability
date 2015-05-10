@@ -1,0 +1,3 @@
+rootProject.name = 'ability'
+include ':library', ':samples'
+project(':library').name = 'ability'

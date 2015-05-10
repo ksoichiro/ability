@@ -1,0 +1,15 @@
+apply plugin: 'idea'
+
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+}
+
+idea {
+    project {
+        jdkName = '1.6'
+        languageLevel = '1.6'
+        vcs = 'Git'
+    }
+}

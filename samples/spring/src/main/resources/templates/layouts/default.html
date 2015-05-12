@@ -1,0 +1,15 @@
+<html xmlns:th=""
+      xmlns:layout="">
+<head>
+</head>
+<body>
+<ul th:if="${#authorization.expression('isAuthenticated()')}">
+    <li><a th:href="@{/home}">Home</a></li>
+    <li><a th:href="@{/logout}">Logout</a></li>
+    <li><a th:href="@{/report}">Reports</a></li>
+    <li th:if="${user.can(T(com.example.constants.Abilities).READ_ORGANIZATION)}"><a th:href="@{/organization}">Organizations</a></li>
+</ul>
+<div layout:fragment="content">
+</div>
+</body>
+</html>

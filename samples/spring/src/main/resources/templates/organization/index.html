@@ -1,0 +1,24 @@
+<html xmlns:th=""
+      xmlns:layout=""
+      layout:decorator="layouts/default">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <table>
+        <thead>
+            <td>ID</td>
+            <td>Name</td>
+        </thead>
+        <tbody>
+            <tr th:each="entity : ${organizationList}">
+                <td th:text="${entity.id}"></td>
+                <td th:text="${entity.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

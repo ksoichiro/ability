@@ -1,0 +1,26 @@
+<html xmlns:th=""
+      xmlns:layout=""
+      layout:decorator="layouts/default">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <div><a th:href="@{/report/new}">New</a></div>
+
+    <table>
+        <thead>
+            <td>ID</td>
+            <td>Title</td>
+        </thead>
+        <tbody>
+            <tr th:each="entity : ${reportList}">
+                <td th:text="${entity.id}"></td>
+                <td th:text="${entity.title}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+spring:
+    jpa:
+        hibernate:
+            ddl-auto: ''
+    thymeleaf:
+        cache: false
+    messages:
+        cache-seconds: 0

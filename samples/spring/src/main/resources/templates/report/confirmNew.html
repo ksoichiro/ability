@@ -1,0 +1,23 @@
+<html xmlns:th=""
+      xmlns:layout=""
+      layout:decorator="layouts/default">
+<head>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <p>Are you sure to save?</p>
+    <form th:action="@{/report/create}" th:object="${reportForm}" method="post">
+        <div>
+            <label for="title">Title</label>
+            <span th:text="*{title}"></span>
+            <input type="hidden" th:field="*{title}" />
+        </div>
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

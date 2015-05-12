@@ -4,6 +4,19 @@ Simple authorization library for Java.
 
 ## Usage
 
+### Add dependency
+
+```groovy
+repositories {
+    maven {
+        url uri('https://oss.sonatype.org/content/repositories/snapshots/')
+    }
+}
+dependencies {
+    compile "com.github.ksoichiro:ability:0.0.1-SNAPSHOT"
+}
+```
+
 ### Create rules
 
 Model class implements `Rule` interface and implements `allowed` method.

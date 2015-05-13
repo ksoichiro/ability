@@ -20,7 +20,6 @@ public class OrganizationController {
         if (!user.can(Abilities.READ_ORGANIZATION)) {
             return "redirect:/";
         }
-        model.addAttribute("user", user);
         model.addAttribute("organizationList", organizationService.findAll());
         return "organization/index";
     }

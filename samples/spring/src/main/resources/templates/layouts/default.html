@@ -7,7 +7,7 @@
     <li><a th:href="@{/home}">Home</a></li>
     <li><a th:href="@{/logout}">Logout</a></li>
     <li><a th:href="@{/report}">Reports</a></li>
-    <li th:if="${user.can(T(com.example.constants.Abilities).READ_ORGANIZATION)}"><a th:href="@{/organization}">Organizations</a></li>
+    <li th:if="${#authentication.principal.can(T(com.example.constants.Abilities).READ_ORGANIZATION)}"><a th:href="@{/organization}">Organizations</a></li>
 </ul>
 <div layout:fragment="content">
 </div>

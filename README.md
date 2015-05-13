@@ -10,6 +10,17 @@ Simple authorization library for Java.
 
 ```groovy
 repositories {
+    mavenCentral()
+}
+dependencies {
+    compile "com.github.ksoichiro:ability:0.0.1"
+}
+```
+
+Or snapshot:
+
+```groovy
+repositories {
     maven {
         url uri('https://oss.sonatype.org/content/repositories/snapshots/')
     }

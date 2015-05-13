@@ -1,5 +1,7 @@
 # ability
 
+[![Build Status](https://travis-ci.org/ksoichiro/ability.svg?branch=master)](https://travis-ci.org/ksoichiro/ability)
+
 Simple authorization library for Java.
 
 ## Usage

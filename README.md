@@ -1,6 +1,7 @@
 # ability
 
 [![Build Status](https://travis-ci.org/ksoichiro/ability.svg?branch=master)](https://travis-ci.org/ksoichiro/ability)
+[![Maven Central](http://img.shields.io/maven-central/v/com.github.ksoichiro/ability.svg?style=flat)](https://github.com/ksoichiro/ability/releases/latest)
 
 Simple authorization library for Java.
 

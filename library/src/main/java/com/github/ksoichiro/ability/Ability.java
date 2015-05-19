@@ -13,6 +13,7 @@ public class Ability implements Serializable {
 
     private ArrayList<Class<?>> rules;
     private Rule selectedRule;
+    private boolean nullObjectAllowed;
 
     // Instantiate rule classes after deserialization
     // not to force rule classes to implement Serializable
@@ -21,6 +22,7 @@ public class Ability implements Serializable {
     public Ability() {
         rules = new ArrayList<Class<?>>();
         ruleInstances = new HashMap<Class<?>, Rule>();
+        nullObjectAllowed = false;
     }
 
     public void addRule(Class<?> ruleClass) {
@@ -48,7 +50,14 @@ public class Ability implements Serializable {
         return rules.contains(ruleClass);
     }
 
+    public void setNullObjectAllowed(boolean nullObjectAllowed) {
+        this.nullObjectAllowed = nullObjectAllowed;
+    }
+
     public boolean allowed(Object object, String action, Object subject) {
+        if (!nullObjectAllowed) {
+            return false;
+        }
         Set<String> rules = new HashSet<String>();
         HashMap<Class<?>, Rule> validRules = new HashMap<Class<?>, Rule>();
         if (selectedRule != null) {
